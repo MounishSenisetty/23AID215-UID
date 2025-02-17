@@ -1,0 +1,96 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styling for Block Elements */
+h1 {
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+body {
+    background-color: lightyellow;
+}
+
+/* Styling for Paragraphs */
+p {
+    color: blue;
+}
+
+img {
+    border: 3px solid green;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: darkgray;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+/* Link Styling */
+#list a {
+    text-decoration: none;
+    font-style: italic;
+    list-style-type: circle;
+}
+
+#list a:link {
+    color: blue;
+}
+
+#list a:visited {
+    color: purple;
+}
+
+#list a:hover {
+    color: green;
+}
+
+#list a:active {
+    color: red;
+}
+
+/* Button Styling */
+.btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
