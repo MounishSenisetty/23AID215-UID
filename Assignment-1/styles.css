@@ -1,0 +1,30 @@
+a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+mark, .highlight {
+    background-color: yellow;
+    padding: 2px;
+}
+
+u {
+    color: darkblue;
+}
+
+p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    border-bottom: 2px solid blue;
+    padding-bottom: 5px;
+}
