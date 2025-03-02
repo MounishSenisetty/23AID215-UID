@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 20px;
+            border-bottom: 3px solid black;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #ffffff;
+            border-right: 3px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sidebar ul li {
+            padding: 15px;
+            margin: 10px;
+            background-color: #f0f0f0;
+            border: 2px solid black;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #ddd;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            border-right: 3px solid black;
+        }
+
+        .organized {
+            width: 20%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .organized-box {
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .sidebar, .organized {
+                width: 100%;
+                border-right: none;
+                border-bottom: 3px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">📸 Photography Club</div>
+        <div class="content">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#events" style="text-decoration: none; color: black;">📅 Events</a></li>
+                    <li><a href="#workshops" style="text-decoration: none; color: black;">📷 Workshops</a></li>
+                    <li><a href="#competitions" style="text-decoration: none; color: black;">🏆 Competitions</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <h3 id="events">📅 Upcoming Events</h3>
+                <p>Join our monthly photography outings and contests!</p>
+
+                <h3 id="workshops">📷 Photography Workshops</h3>
+                <p>Learn from experts in DSLR, smartphone, and drone photography.</p>
+
+                <h3 id="competitions">🏆 Photography Competitions</h3>
+                <p>Showcase your best work and win prizes every season.</p>
+            </div>
+            <div class="organized">
+                <div class="organized-box">
+                    Organized by: <br>
+                    <b>Photography Enthusiasts Society</b> <br>
+                    📍 Campus Media Center
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

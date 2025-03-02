@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar and Main Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .header, .footer {
+            background-color: #f8a5c2;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 5px;
+        }
+
+        .sidebar, .main {
+            padding: 30px;
+            border: 1px solid black;
+        }
+
+        .sidebar {
+            background-color: #f8a5c2;
+        }
+
+        .main {
+            background-color: #f8a5c2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">
+            <div class="sidebar">Aside/Sidebar</div>
+            <div class="main">Main content</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
