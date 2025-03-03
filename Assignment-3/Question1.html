@@ -1,26 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iFrame Example</title>
 </head>
 <body>
-
-    <h2>iFrame Example</h2>
+    <h1>iFrame Example</h1>
     
-    <iframe name="my_area" width="400" height="400" src="mypicture.jpg" scrolling="yes"></iframe>
+    <!-- Part I: Create an iframe with name "my_area" and insert picture -->
+    <iframe id="my_area" name="my_area" width="800" height="400" scrolling="yes" src="data:image/jpeg;base64,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"></iframe>
     
-    <br>
-
-    <a href="https://www.example.com" target="my_area">Open Example Website</a>
-    <a href="https://www.google.com" target="my_area">Open Google</a>
+    <!-- Part II: Links that display content in the iframe -->
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://www.amrita.edu" target="my_area">Amrita University</a></li>
+        <li><a href="https://www.w3schools.com" target="my_area">W3Schools</a></li>
+        <li><a href="https://www.mozilla.org" target="my_area">Mozilla</a></li>
+    </ul>
     
-    <br><br>
+    <script>
+        // Script to handle links that cannot be displayed in iframe
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const iframe = document.getElementById('my_area');
+                
+                // Try to load in iframe first
+                try {
+                    iframe.src = this.href;
+                    e.preventDefault();
+                    
+                    // Check if the page loaded successfully in the iframe
+                    iframe.onload = function() {
+                        try {
+                            // This will throw an error if the page blocks iframe display
+                            const iframeContent = iframe.contentWindow.document;
+                        } catch (error) {
+                            // If error, open in new window
+                            window.open(link.href, '_blank');
+                        }
+                    };
+                } catch (error) {
+                    // If any error, open in new window
+                    window.open(link.href, '_blank');
+                }
+            });
+        });
+    </script>
     
     <footer>
         <p>&copy; 2025 Amrita Viswavidyapeetham. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
