@@ -1,0 +1,53 @@
+/* Default styles */
+h1 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Media Queries for different screen sizes */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Button Styling */
+.btn {
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 800px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 500px) {
+    .btn {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
