@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background-color: #0d1b2a;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      width: 400px;
+      margin: auto;
+      padding: 20px;
+      background-color: #1b263b;
+      border-radius: 10px;
+    }
+    .form-container h2 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 3px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 6px;
+      border: none;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 7px 15px;
+      font-weight: bold;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      background-color: white;
+      color: black;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Student Registration Form</h2>
+  <form id="studentForm">
+    <div class="form-group">
+      <label>Name of Student</label>
+      <input type="text" id="name">
+    </div>
+    <div class="form-group">
+      <label>Mobile No</label>
+      <input type="text" id="mobile">
+    </div>
+    <div class="form-group">
+      <label>Address Line</label>
+      <input type="text" id="address">
+    </div>
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" id="city">
+    </div>
+    <div class="form-group">
+      <label>State</label>
+      <input type="text" id="state">
+    </div>
+    <div class="form-group">
+      <label>Pincode</label>
+      <input type="text" id="pincode">
+    </div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</div>
+
+<!-- Output Table -->
+<table id="outputTable" style="display:none;">
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Mobile No</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+  document.getElementById("studentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Get form values
+    let name = document.getElementById("name").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let address = document.getElementById("address").value.trim();
+    let city = document.getElementById("city").value.trim();
+    let state = document.getElementById("state").value.trim();
+    let pincode = document.getElementById("pincode").value.trim();
+
+    // Validation
+    if (!name || !mobile || !address || !city || !state || !pincode) {
+      alert("All fields are required.");
+      return;
+    }
+
+    if (!/^[a-zA-Z ]+$/.test(name)) {
+      alert("Name should contain only alphabets.");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(mobile)) {
+      alert("Mobile number should be exactly 10 digits.");
+      return;
+    }
+
+    if (!/^\d{6}$/.test(pincode)) {
+      alert("Pincode should be exactly 6 digits.");
+      return;
+    }
+
+    // Add to table
+    let table = document.getElementById("outputTable");
+    let tbody = document.getElementById("tableBody");
+
+    let row = tbody.insertRow();
+    row.insertCell(0).innerText = name;
+    row.insertCell(1).innerText = mobile;
+    row.insertCell(2).innerText = state;
+
+    table.style.display = "table";
+
+    // Optionally clear form after submit
+    document.getElementById("studentForm").reset();
+  });
+</script>
+
+</body>
+</html>

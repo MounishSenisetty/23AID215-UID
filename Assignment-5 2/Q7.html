@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Menu Items</title>
+</head>
+<body>
+
+  <h2>Menu Items</h2>
+
+  
+  <div class="menu-item" data-menu="true">Home</div>
+  <div class="menu-item" data-menu="false">About</div>
+  <div class="menu-item" data-menu="true">Contact</div>
+  <div class="menu-item">Help</div>
+  <div class="menu-item" data-menu="true">Services</div>
+
+  <script>
+    
+    const items = document.querySelectorAll('.menu-item[data-menu="true"]');
+
+    
+    console.log("Selected items:");
+    items.forEach(function(item, index) {
+      console.log(index + 1 + ". " + item.textContent);
+    });
+  </script>
+
+</body>
+</html>

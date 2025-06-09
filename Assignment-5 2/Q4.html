@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Categorizer</title>
+</head>
+<body>
+  <h1>Temperature Categorizer</h1>
+
+  <script>
+    
+    let temp = prompt("Enter the temperature value in °C:");
+
+    
+    temp = parseFloat(temp);
+
+   
+    if (isNaN(temp)) {
+      alert("Invalid input! Please enter a numeric temperature.");
+      console.log("Invalid temperature input.");
+    } else {
+      let category;
+
+     
+      if (temp < 0) {
+        category = "Freezing";
+      } else if (temp >= 0 && temp <= 15) {
+        category = "Cold";
+      } else if (temp >= 16 && temp <= 30) {
+        category = "Moderate";
+      } else {
+        category = "Hot";
+      }
+
+      
+      alert("Temperature category: " + category);
+      console.log("Temperature category: " + category);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Button Text</title>
+</head>
+<body>
+
+  <h3>Toggle Show/Hide</h3>
+
+  <button onclick="toggleText(this)">Hide</button>
+
+  <script>
+   
+    function toggleText(button) {
+      if (button.innerText === "Hide") {
+        button.innerText = "Show";
+      } else {
+        button.innerText = "Hide";
+      }
+    }
+  </script>
+
+</body>
+</html>
